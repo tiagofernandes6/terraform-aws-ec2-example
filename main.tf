@@ -23,4 +23,5 @@ module "ec2_instance" {
   source        = "./modules/ec2-instance"
   instance_type = var.instance_type
   security_group_ids = [aws_security_group.allow_ssh.id]
+  key_name           = var.key_name
 }

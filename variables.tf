@@ -8,3 +8,9 @@ variable "instance_type" {
   type        = string
   default     = "t3.micro"
 }
+
+variable "key_name" {
+  description = "Name of an existing EC2 key pair for SSH access. Set it in terraform.tfvars; leave unset for no key pair."
+  type        = string
+  default     = null
+}

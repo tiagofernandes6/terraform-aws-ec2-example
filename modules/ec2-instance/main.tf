@@ -18,7 +18,7 @@ resource "aws_instance" "this" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = var.instance_type
   vpc_security_group_ids = var.security_group_ids
-  key_name               = "codeforall-ec2-keys"
+  key_name               = var.key_name
   tags = {
     Name = "TerraformFreeTierExample"
   }
